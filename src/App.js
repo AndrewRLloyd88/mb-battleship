@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <h1>Battleship</h1>
-      <div className="game-area">
+      <div id="UniqueDropzone" className="game-area">
         <GameBoard />
         <Ships />
       </div>

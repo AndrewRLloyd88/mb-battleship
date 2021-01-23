@@ -50,7 +50,7 @@ export default function Ships() {
         {/* <div>{p1Ships[ship].appearance}</div> */}
         <div
           id={ship}
-          className="ship BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied"
+          className="ship BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied Block--isDraggable"
           data-dropzone="1"
         >
           {renderShipsToPlace(p1Ships[ship].appearance)}

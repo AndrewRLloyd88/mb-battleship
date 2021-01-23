@@ -1,7 +1,7 @@
 import { Droppable } from '@shopify/draggable';
 
 export default function UniqueDropzone() {
-  const containers = document.querySelectorAll('#UniqueDropzone .BlockLayout');
+  const containers = document.querySelectorAll('#UniqueDropzone');
 
   if (containers.length === 0) {
     return false;
