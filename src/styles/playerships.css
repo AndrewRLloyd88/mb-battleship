@@ -1,0 +1,32 @@
+.ships {
+  display: flex;
+}
+
+.ship > .square {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.ship > .square {
+  border-left: none;
+}
+
+[id*='4Car'] {
+  border-bottom: 1px solid black;
+}
+
+[id*='3Bat'] {
+  border-bottom: 1px solid black;
+}
+
+[id*='2Cru'] {
+  border-bottom: 1px solid black;
+}
+
+[id*='2Sub'] {
+  border-bottom: 1px solid black;
+}
+
+[id*='1Des'] {
+  border-bottom: 1px solid black;
+}
