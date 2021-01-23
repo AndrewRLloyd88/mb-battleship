@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/gameboard.css';
 import '../styles/playerships.css';
-import { Droppable } from '@shopify/draggable';
+import { Draggable } from '@shopify/draggable';
 
 export default function Ships() {
   const [p1Ships, setp1Ships] = useState({
