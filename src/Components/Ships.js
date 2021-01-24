@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/gameboard.css';
 import '../styles/playerships.css';
-import { Draggable } from '@shopify/draggable';
+import { Rnd } from 'react-rnd';
 
 export default function Ships() {
   const [p1Ships, setp1Ships] = useState({
@@ -41,6 +41,20 @@ export default function Ships() {
     return shipObj;
   };
 
+  const style = {
+    isResizable: {
+      top: false,
+      right: false,
+      bottom: false,
+      left: false,
+      topRight: false,
+      bottomRight: false,
+      bottomLeft: false,
+      topLeft: false,
+    },
+    zIndex: 1000,
+  };
+
   const renderShips = Object.keys(p1Ships).map((ship, idx) => {
     console.log(p1Ships[ship].appearance);
     return (
@@ -48,13 +62,10 @@ export default function Ships() {
         {ship}
         <div>Ship Size {p1Ships[ship].size}</div>
         {/* <div>{p1Ships[ship].appearance}</div> */}
-        <div
-          id={ship}
-          className="ship BlockWrapper BlockWrapper--isDropzone draggable-dropzone--occupied Block--isDraggable"
-          data-dropzone="1"
-        >
+        <Rnd style={style}>
+          <div id={ship} className="ship" />
           {renderShipsToPlace(p1Ships[ship].appearance)}
-        </div>
+        </Rnd>
       </div>
     );
   });

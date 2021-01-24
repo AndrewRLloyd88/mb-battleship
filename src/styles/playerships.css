@@ -2,13 +2,13 @@
   display: flex;
 }
 
-.ship > .square {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+.square {
+  /* border-left: 1px solid black; */
+  border-right: none;
 }
 
-.ship > .square {
-  border-left: none;
+.square .square {
+  border-right: 1px solid black;
 }
 
 [id*='4Car'] {
